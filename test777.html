@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+		body{
+			display: flex;
+		}
+    div{
+			cursor: pointer;
+			margin: 20px;
+      width: 200px;
+      height: 200px;
+      background-color: rgb(204, 204, 243);
+    }
+    .xuanzhong{
+      box-shadow: 0 0 5px gray,
+				0 0 5px gray,
+				0 0 5px gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="t xuanzhong"></div>
+  <div class="t "></div>
+  <div class="t "></div>
+  <div class="t "></div>
+  <div class="t "></div>
+  <div class="t "></div>
+  <div class="t "></div>
+  <div class="t "></div>
+	
+	
+	<script>
+		let divs=document.getElementsByClassName("t")
+		
+		document.addEventListener('click',(e)=>{
+			for(let item of divs){
+				item.classList.remove("xuanzhong")
+			}
+			for(let item of divs){
+				if(item.contains(e.target)){
+					item.classList.add("xuanzhong")
+				}
+			}
+		})
+	</script>
+</body>
+</html>
